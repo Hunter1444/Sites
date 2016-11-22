@@ -1,0 +1,57 @@
+//переменные
+
+@gray: #8b8b8b;
+@orange:#f57365;
+@black-light:#333333;
+@white-light:#e2dad9;
+
+//миксины
+
+.btn{
+	display:block;
+	color:white;
+	text-decoration:none;
+	border:3px solid white;
+	border-radius:3px;
+	padding:20px 70px;
+	padding-right:60px;
+	transition-duration:0.5s;
+	
+	&:hover{
+	color:black;
+	background-color:white;
+	}
+}
+
+.links{
+	text-decoration:none;
+	color:white;
+}
+
+.zero{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+.font-lato-regular{
+	font-family:"Lato", sans-serif;
+	font-weight:400;
+}
+
+.font-lato-light{
+	font-family:"Lato", sans-serif;
+	font-weight:300;
+}
+
+.font-lato-bold{
+	font-family:"Lato", sans-serif;
+	font-weight:700;
+}
+
+
+.conteiner::after{
+content:'';
+display:table;
+clear:both;
+}
