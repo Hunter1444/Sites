@@ -80,11 +80,24 @@
 	</div>
 	<div class="slider">
 		<div class="conteiner slider__conteiner">
-			<div class="slider__div slider__div_1">
+			<div class="slider__div slider__div_1 slider__div_active">
 				<p class="slider__paragraph">“I am so happy because I found this recipe, and it just made my life easier.
 				Thanks  so much for sharing!”</p>
 				<span class="slider__contact">- Michael Dawson, San Francisco, CA -</span>
 			</div>
+			
+			<div class="slider__div slider__div_2">
+				<p class="slider__paragraph">“I am so happy because I found this recipe, and it just made my life easier.
+				Thanks  so much for sharing!”</p>
+				<span class="slider__contact">- Michael Dawson, San Francisco, CA -</span>
+			</div>
+			
+			<div class="slider__div slider__div_3">
+				<p class="slider__paragraph">“I am so happy because I found this recipe, and it just made my life easier.
+				Thanks  so much for sharing!”</p>
+				<span class="slider__contact">- Michael Dawson, San Francisco, CA -</span>
+			</div>
+			
 			<div class="slider-lever">
 				<b class="slider-lever__items slider-lever__items_1 slider-lever_active"></b>
 				<b class="slider-lever__items slider-lever__items_2"></b>
@@ -180,5 +193,42 @@
 			<span class="footer__design">DESIGN BY:<a href="#">WWW.BEKADES.COM</a></span>
 		</div>
 	</footer>
+	
+	<script>
+	var lever1 = document.querySelector(".slider-lever__items_1");
+	var lever2 = document.querySelector(".slider-lever__items_2");
+	var lever3 = document.querySelector(".slider-lever__items_3");
+	var slider1 = document.querySelector(".slider__div_1");
+	var slider2 = document.querySelector(".slider__div_2");
+	var slider3 = document.querySelector(".slider__div_3");
+	
+	lever1.addEventListener("click", function(event){
+	lever1.classList.add("slider-lever_active");
+	lever2.classList.remove("slider-lever_active");
+	lever3.classList.remove("slider-lever_active");
+	slider1.classList.add("slider__div_active");
+	slider2.classList.remove("slider__div_active");
+	slider3.classList.remove("slider__div_active");
+	})
+	
+	lever2.addEventListener("click", function(event){
+	lever2.classList.add("slider-lever_active");
+	lever1.classList.remove("slider-lever_active");
+	lever3.classList.remove("slider-lever_active");
+	slider2.classList.add("slider__div_active");
+	slider1.classList.remove("slider__div_active");
+	slider3.classList.remove("slider__div_active");
+	})
+	
+	lever3.addEventListener("click", function(event){
+	lever3.classList.add("slider-lever_active");
+	lever1.classList.remove("slider-lever_active");
+	lever2.classList.remove("slider-lever_active");
+	slider3.classList.add("slider__div_active");
+	slider1.classList.remove("slider__div_active");
+	slider2.classList.remove("slider__div_active");
+	})
+	</script>
+	
 </body>
 </html>

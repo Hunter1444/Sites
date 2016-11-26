@@ -1,3 +1,5 @@
+@import url(variables.less);
+
 @font-face{
 	font-family:lato-hair;
 	src: url(../font/Lato-Hai.ttf);
@@ -7,67 +9,6 @@
 	font-family:lato-hair;
 	src: url(../font/Lato-HaiIta.ttf);
 	font-style:italic
-}
-
-//переменные
-
-@gray: #8b8b8b;
-@orange:#f57365;
-@black-light:#333333;
-@white-light:#e2dad9;
-
-//миксины
-
-.btn{
-	display:block;
-	color:white;
-	text-decoration:none;
-	border:3px solid white;
-	border-radius:3px;
-	padding:20px 70px;
-	padding-right:60px;
-	transition-duration:0.5s;
-	
-	&:hover{
-	color:black;
-	background-color:white;
-	}
-}
-
-.links{
-	text-decoration:none;
-	color:white;
-}
-
-.zero{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-}
-
-.font-lato-regular{
-	font-family:"Lato", sans-serif;
-	font-weight:400;
-}
-
-.font-lato-light{
-	font-family:"Lato", sans-serif;
-	font-weight:300;
-	line-height:28px;
-	letter-spacing:0.7px;
-	color:#424242;
-}
-
-.font-lato-bold{
-	font-family:"Lato", sans-serif;
-	font-weight:700;
-}
-
-
-.conteiner::after{
-content:'';
-display:table;
-clear:both;
 }
 
 //Пошла верстка
@@ -89,6 +30,12 @@ font-family: 'Lato', sans-serif;
 		padding:0;
 	}
 	
+}
+
+.conteiner::after{
+content:'';
+display:table;
+clear:both;
 }
 
 .header{
@@ -377,11 +324,11 @@ font-family: 'Lato', sans-serif;
 }
 }
 .slider{
-
+	
 	@media(max-device-width: 640px){
 		display:none;
 	}
-	
+	overflow-x: hidden;
 	background:#4a3949;
 	
 	&__conteiner{
@@ -390,16 +337,42 @@ font-family: 'Lato', sans-serif;
 	}
 	
 	&__div{
-
+	animation: to-left 1s;
 	margin:0 auto;
 	padding-top:215px;
 	width:900px;
-	
+		
+		
 		&_1{
 		background:url(../img/foto1.png) no-repeat 395px 80px;
+		display:none;
+		}
+		
+		&_2{
+		display:none;
+		background:url(../img/features-img1.png) no-repeat 395px 80px;
+		}
+		
+		&_3{
+		display:none;
+		background:url(../img/features-img2.png) no-repeat 395px 80px;
+		}
+		
+		&_active{
+		display:block;
 		}
 	}
-	
+@keyframes to-left{
+	0%{
+	transform:translateX(-1600px);
+	opacity:0;
+	};
+	100%{
+	transform:translateX(0px);
+	opacity:1;
+	}
+}
+
 	&__paragraph{
 	.zero;
 	font-size:30px;
